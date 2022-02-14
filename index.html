@@ -1,40 +1,79 @@
+<!-- indica al navegador que esto es un archivo HTML -->
 <!doctype html>
+<!-- indica los idimas del documento, en este caso español -->
 <html lang="es">
+    <!-- etiqueta que sirve para dar informacion a los navegadores sobre la web.  Todo lo que hay 
+         dentro de head se tiene que poner en todos los documentos que se creen -->
     <head>
+        <!-- 
+            meta = Informacion extra para el navegador que engloba toda la pagina web, 
+            Charset = números, letras y símbolos que tenemos a disposición para representar un lenguaje.
+            utf = indica el lenguaje de la pagina, en este caso grecoromano 
+        -->
         <meta charset="utf-8">
+        <!-- 
+            Siempre hay que poner esta linea de codigo para que nuestra web se pueda adaptar a las 
+            distintas pantallas que existen.  
+         -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- 
+            icono que aparece en la pestaña de la pagina web en el navegador - favicon
+            rel = enlaza este documento con otro enlace/documento/lugar externo.
+            href = enlace a internet o lugar a nuestras carpetas del servidor donde coger la imagen(32x32pix)
+        -->
 		<link rel="shortcut icon" href="https://www.youtube.com/s/desktop/12d6b690/img/favicon.ico">
 
-		<title>Título</title>
+
+		<!-- Titulo que aparece en la ventana del navegador y en google -->
+        <title>Título</title>
+        <!-- Descripcion que aparece justo debajo del titulo en google -->
 		<meta name="description" content="descripción de la web, se recomienda 90 caracteres">
+        <!-- palabras clave que identifican tu pagina web ("hashtags") -->
         <meta name="keywords" 	 content="palabras clave, separadas, por comas">
 
-        <link href="style/normalize.css" rel="stylesheet">
-        <link href="style/main.css" rel="stylesheet">
+        <!-- vincula a la carpeta indicada, en este caso un documento css para decidir el estilo 
+             de la pagina web -->
+        <link rel="stylesheet" href="style/normalize.css" >
+        <link rel="stylesheet" href="style/main.css" >
     </head>
     
+    <!-- indica todo lo que va a aparecer en pantalla al entrar en la pagina web-->
     <body>
+        <!-- Cabecera de la pagina. Logo, menu, titulo, etc -->
         <header>
+            <!-- 
+                div = caja
+                class = indica a que elemento del documento css se hace referencia. Puede haber 
+                varios con el mismo nombre (id solo puede haber uno con ese nombre) 
+            -->
             <div class="logo">
+                <!-- svg = dibujo vectorial, todo lo que no sean fotos tienen que ser svg -->
                 <svg viewbox="0 0 24 24">
+                    <!-- materialdesignicon.com es una pagina para conseguir iconos svg -->
                     <path d="M18.36,2.64C20,2.64 21.36,4 21.36,5.64C21.36,7.29 20,8.64 18.36,8.64C16.71,8.64 15.36,7.29 15.36,5.64C15.36,5.34 15.41,5.06 15.5,4.8C14.43,4.29 13.25,4 12,4A8,8 0 0,0 4,12L4.04,12.84L2.05,13.05L2,12A10,10 0 0,1 12,2C13.69,2 15.28,2.42 16.67,3.16C17.16,2.83 17.74,2.64 18.36,2.64M18.36,4.64A1,1 0 0,0 17.36,5.64A1,1 0 0,0 18.36,6.64C18.92,6.64 19.36,6.19 19.36,5.64C19.36,5.08 18.92,4.64 18.36,4.64M5.64,15.36C7.29,15.36 8.64,16.71 8.64,18.36C8.64,18.66 8.59,18.94 8.5,19.2C9.57,19.71 10.75,20 12,20A8,8 0 0,0 20,12L19.96,11.16L21.95,10.95L22,12A10,10 0 0,1 12,22C10.31,22 8.72,21.58 7.33,20.84C6.84,21.17 6.26,21.36 5.64,21.36C4,21.36 2.64,20 2.64,18.36C2.64,16.71 4,15.36 5.64,15.36M5.64,17.36C5.08,17.36 4.64,17.81 4.64,18.36C4.64,18.92 5.08,19.36 5.64,19.36A1,1 0 0,0 6.64,18.36A1,1 0 0,0 5.64,17.36M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z" />
                 </svg>
             </div>
 
             <div class="title">
+                <!-- h1 = titulo principal de la pagina web -->
                 <h1>Título</h1>
             </div>
         </header>
 
         <main>
             <div class="subtitle">
+                <!-- suele utilizarse para nombrar las diferentes secciones de la pagina -->
                 <h2>Subtítulo</h2>
             </div>
-
+            <!-- crud(CreateReadUpdateDelete) = modificar datos de una tabla con formularios -->
             <div class="crud">
                 <div class="crud__table">
                     <div class="crud__table-grid">
                         <div class="crud__table-grid-element">
+                            <!-- 
+                                src = indica donde se encuentra la imagen
+                                alt(alternativa) = nombre para busqueda de la imagen en google imagenes 
+                            -->
                             <img src="images/1.jpg" alt="ardillas">
                         </div>
 
@@ -78,45 +117,65 @@
                     </div>
                 </div>
     
+                <!-- form = formulario -->
                 <div class="crud__form">
                     <form class="crud__admin-form" id="crud__user-form" action="/users/create" autocomplete="off"> 
+                        <!-- cada input tiene un label, van juntos -->
                         <div class="crud__form-element">
                             <div class="crud__form-label">
+                                <!-- label = etiqueta de los formularios -->
                                 <label for="name">Nombre</label>
                             </div>
 
+                            <!-- input = meter datos -->
                             <div class="crud__form-input">
                                 <input type="text" name="name">
                             </div>
                         </div>
 
                         <div class="crud__form-element">
+                            <!-- button = boton -->
                             <button class="crud__store-button">Guardar</button>
                         </div>
                     </form>
                 </div>
-            </div> 
+            </div>
         </main>
 
         <footer>
             <div class="footer-element copyright">
+                <!-- p = paragrafo -->
                 <p>@2048</p>
             </div>
             <div class="footer-element author">
+                <!-- enlaces -->
                 <a href="https://thispersondoesnotexist.com/"><p>enlace a una web de verdad</p></a>
             </div>
         </footer>
             
+        <!-- Indica donde se encuentra el archivo de JavaScript. El JavaScript añade interaccion al html -->
         <script src="js/main.js"></script>
 
+        <!-- 
+            Libreria de google ya hecha para añadir las fuentes tipograficas de google.
+            fonts.google.com - pagina para descararse otras fuentes 
+        -->
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
         <script>
             WebFont.load({
                 google: {
+                    // grosor de la linea tipografica
                     families: ['Ubuntu:700,700i', 'Ubuntu+Condensed:400']
                 }
             });        
         </script>
+
+        <!-- 
+            ul = lista
+            li = elementos que van dentro de una lista 
+        -->
+
+        <!-- <video> = video -->
 
     </body>
 </html>
