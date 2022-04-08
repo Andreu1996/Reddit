@@ -4,7 +4,7 @@
 
 body{
     /* indica el color del fondo */
-    background-color: hsl(0, 0%, 17%);
+    background-color: hsl(0, 0%, 100%);
     display:flex; 
     flex-direction:column;
     /* Distancia que hay fuera del div */
@@ -23,15 +23,110 @@ header{
     background-color: hsla(0, 0%, 81%, 0.589);
 }
 
-main{
-    margin: 1em 0;
-    width: 100%;
-}
-
 footer{
     margin-top: auto; 
     width: 100%;
     align-items: center;
+}
+
+/*====================
+=======Structure======
+======================*/
+
+
+main{
+    margin: 0 auto;
+    position: relative;
+    top: 2rem;
+    width: 90%;
+}
+
+/*====================
+========Columns=======
+======================*/
+
+.desktop-four-columns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.desktop-four-columns .column{
+    width: 22%;
+}
+
+
+.desktop-three-columns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.desktop-three-columns .column{
+    width: 30%;
+}
+
+.desktop-two-columns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.desktop-two-columns .column{
+    width: 48%;
+}
+
+.desktop-two-columns-aside{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.desktop-two-columns-aside .column-aside{
+    width: 30%;
+}
+
+.desktop-two-columns-aside .column-main{
+    width: 65%;
+}
+
+.desktop-two-columns-inline{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.desktop-two-columns-inline .column{
+    width: 48%;
+}
+
+.desktop-two-columns-inline .column div{
+    display: flex;
+    margin-right: 1em;
+}
+
+.desktop-one-column{
+    width: 100%;
+}
+
+.desktop-one-column .column{
+    width: 100%;
+}
+
+/*====================
+========Image=========
+======================*/
+
+img {
+    max-width: 100%;
+}
+
+/*====================
+========List=========
+======================*/
+
+.inline li{
+    display: inline;
 }
 
 /*====================
@@ -100,125 +195,7 @@ a:focus, a:hover {
     text-decoration: none;
 }
 
-
-/*====================
-========Header=========
-======================*/
-
-.logotitle{
-    display: flex;
-    justify-content: left;
-}
-
-.logo{
-    width: 10%;
-}
-
-.logo, .title, .menu{
-    margin: auto 0;
-}
-
-.logo img{
-    background: transparent;
-}
-
-.menu{
-    display: flex;
-    justify-content: space-between;
-    width: 40%;
-}
-
-/*====================
-========Image=========
-======================*/
-
-img {
-    max-width: 100%;
-}
-
-/*====================
-========Slider=========
-======================*/
-
-.slider{
-    padding: 0.2rem;
-    border-radius: 20rem;
-	transition: 0.5s;
-	text-decoration: none;
-    z-index: 5rem;
-    position: 2rem;
-}
-
-/*====================
-========Featured======
-======================*/
-
-.featured{
-    width: 100%;
-}
-
-.featured-title{
-    margin: 3em 0;
-    text-align: center;
-}
-
-.featured-title h1{}
-
-.featured-elements{
-    display: flex;
-    justify-content: space-between;
-}
-
-.featured-element{
-    margin:0.5rem;
-    width: 25%;
-}
-
-.featured-element-text-title{
-    margin-bottom: 0.5em;
-}
-
-.featured-element-text-title h5{
-    color:hsl(0, 77%, 63%);
-    text-shadow: 3px 0px 2px hsl(0, 11%, 4%);
-}
-
-.featured-element-text-description{
-    margin: 5% auto;
-}
-
-.featured-element-text-author{
-    margin-top: 5%;
-}
-
-.offer{
-    margin: 5rem 0.5rem;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.offer-text{
-    padding: 0.5rem;
-    width: 90%;
-}
-
-.offer-text-description{
-    margin-top: 40%;
-}
-
-.offer-image{
-    width: 70%;
-}
-
-.copyright{
-    margin-bottom: 1em;
-    text-align: center;
-    width: 100%;
-}
-
-.author{
-    margin-bottom: 1em;
+.center{
     text-align: center;
 }
 
@@ -315,17 +292,115 @@ img {
 
 @media (max-width:479px) {
 
-    header{
-        height: max-content;
+    /*====================
+    =======Structure======
+    ======================*/
+
+    main{
+        margin: 0 auto;
+        position: relative;
+        top: 5rem;
+        width: 95%;
+    }
+
+    /*====================
+    ========Columns=======
+    ======================*/
+
+    .mobile-one-column{
+        display: block;
         width: 100%;
-        margin: 0%;
-        padding: 0%;
+    }
+
+    .mobile-one-column .column{
+        width: 100%;
+    }
+
+    .mobile-one-column-inline{
+        display: inherit;
+        width: 100%;
+    }
+    
+    .mobile-one-column-inline .column{
+        border-bottom: 1px solid hsl(0, 0%, 87%);
+        display: flex;
+        margin-bottom: 1em;
+        width: 100%;
+    }
+    
+    .mobile-one-column-inline .column div{
+        display: inherit;
+        margin-right: 1em;
+        width: 100%;
+    }
+
+    .mobile-two-columns{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .mobile-two-columns .column{
+        width: 48%;
+    }
+
+    .desktop-two-columns-aside .column-aside{
+        display: none;
+    }
+
+    .mobile-two-columns-aside .column-main{
+        width: 100%;
+    }
+
+    .mobile-three-columns{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .mobile-three-columns .column{
+        width: 30%;
+    }
+
+    .mobile-three-columns-start{
+        display: flex;
+        justify-content: start;
+        width: 100%;
+    }
+
+    .mobile-three-columns-start .column{
+        width: inherit;
+    }
+
+    .mobile-four-columns{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .mobile-four-columns .column{
+        width: 22%;
+    }
+
+/*=======================
+  =======Menu============
+  =======================*/
+
+    header{
+        width: 96%;
+        height: max-content;
+        padding: 1rem 0.5rem;
+
     }
 
     .menu{
         display: flex;
         justify-content: space-between;
         width: 100%;
+    }
+
+    .menu_element{
+        margin: 0rem 0.5rem;
     }
 
     .menu_element h3{
@@ -381,8 +456,38 @@ img {
         margin: 1em 0;
     }
 
-    .author{
-        padding: 1em;
+    .footer-element{
+        display: none;
+    }
+
+    /*=======================
+  =======Form============
+  =======================*/
+
+    .top-text h1{
+        font-size: 2rem;
+    }
+
+    .contact-text{
+        padding-right: 2rem;
+    }
+
+    .text-info{
+        display: none;
+    }
+
+
+    .form-element{
+        margin-top: 1.5rem;
+    }
+
+    .mobile-left{
+        text-align: left;
+    }
+
+    .form-element-button{
+        margin: 1rem 0rem;
+        margin-top: 0.5rem;
     }
 }
 
