@@ -11,16 +11,15 @@ body{
     margin: 0em auto;
     min-height: 100vh;
     width: 100%;
+    background-color: rgb(218, 218, 218);
     /* background-image: url("https://s.itl.cat/pngfile/s/29-299907_kimi-no-na-wa-wallpaper-for-iphone-iphone.jpg"); */
 }
 
 header{
     display: flex;
-    height: 10%;
+    padding: 0.5rem 1rem;
     justify-content: space-between;
-    padding: 0 5%;
-    width: 90%;
-    background-color: hsla(0, 0%, 81%, 0.589);
+    background-color: white;
 }
 
 footer{
@@ -35,7 +34,7 @@ footer{
 
 
 main{
-    margin: 0 auto;
+    margin: 0 8.5rem;
     position: relative;
     top: 2rem;
     width: 90%;
@@ -134,7 +133,7 @@ img {
 ======================*/
 
 h1, h2, h3, h4, h5, h6, a, p{
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 0%);
 }
 
 h1, h2, h3, h4 {
@@ -154,24 +153,24 @@ h1 {
     font-size: 2.5em;
     font-weight: 600;
     text-decoration: none;
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 0%);
 }
 
 h2 {
     font-size: 2em;
     font-weight: 600;
     text-decoration: none;
-    color: hsl(0, 0%, 100%)
+    color: hsl(0, 0%, 0%)
 }
 
 h4 {
     font-weight: 600;
     text-decoration: none;
-    color: hsl(0, 0%, 100%)
+    color: hsl(0, 0%, 0%)
 }
 
 p{
-    color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 0%);
     text-align: justify;
 }
 
@@ -198,6 +197,37 @@ a:focus, a:hover {
 .center{
     text-align: center;
 }
+
+/*====================
+========Header========
+======================*/
+
+.header-elements{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;}
+
+.logo-svg{
+    display: flex;
+    margin: 0rem;
+    width: 25%;
+}
+
+.logo-svg-element{
+    margin: 0rem 0.2rem;
+
+}
+
+.logo-svg-icon svg{
+    width: 100%;
+    height: 100%;
+}
+
+.logo-svg-text svg{
+    width: 100%;
+    height: 100%;
+}
+
 
 @media (min-width: 1920px) {
 
