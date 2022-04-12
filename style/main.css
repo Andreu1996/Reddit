@@ -4,6 +4,7 @@
 
 body{
     /* indica el color del fondo */
+    overflow: visible;
     background-color: hsl(0, 0%, 100%);
     display:flex; 
     flex-direction:column;
@@ -17,7 +18,7 @@ body{
 
 header{
     display: flex;
-    padding: 0.5rem 1rem;
+    padding: 0.2rem 1rem;
     justify-content: space-between;
     background-color: white;
 }
@@ -34,10 +35,10 @@ footer{
 
 
 main{
-    margin: 0 8.5rem;
+    overflow: visible;
+    margin-left: 12%;
     position: relative;
-    top: 2rem;
-    width: 90%;
+    width: 77%;
 }
 
 /*====================
@@ -51,7 +52,7 @@ main{
 }
 
 .desktop-four-columns .column{
-    width: 22%;
+    width: 25%;
 }
 
 
@@ -82,7 +83,7 @@ main{
 }
 
 .desktop-two-columns-aside .column-aside{
-    width: 30%;
+    width: 32%;
 }
 
 .desktop-two-columns-aside .column-main{
@@ -117,7 +118,29 @@ main{
 ======================*/
 
 img {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+/*====================
+======Join-Style======
+======================*/
+
+.join-style{
+    background-color: hsl(209, 82%, 51%);
+    padding: 0.2rem 0.9rem;
+    border-radius: 1rem;
+}
+
+.join-style p{
+    font-size: 0.8rem;
+    font-weight: 600;
 }
 
 /*====================
@@ -137,16 +160,16 @@ h1, h2, h3, h4, h5, h6, a, p{
 }
 
 h1, h2, h3, h4 {
-    font-family: "Ubuntu";
+    font-family: "Noto Sans";
 }
 
 h5, h6 {
-    font-family: "Ubuntu Condensed";
+    font-family: "Noto Sans";
     
 }
 
 a, td, p, button{
-    font-family: "Ubuntu";
+    font-family: "Noto Sans";
 }
 
 h1 {
@@ -172,6 +195,7 @@ h4 {
 p{
     color: hsl(0, 0%, 0%);
     text-align: justify;
+    font-weight: 100;
 }
 
 h6{
@@ -198,9 +222,28 @@ a:focus, a:hover {
     text-align: center;
 }
 
+.withe-text p, .withe-text h4{
+    color: white;
+}
+
 /*====================
 ========Header========
 ======================*/
+
+.desktop-two-columns-aside-reddit{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.desktop-two-columns-aside .column-aside-reddit{
+    position: sticky;
+    width: 15%;
+}
+
+.desktop-two-columns-aside .column-main-reddit{
+    width: 80%;
+}
 
 .header-elements{
     display: flex;
@@ -210,22 +253,560 @@ a:focus, a:hover {
 .logo-svg{
     display: flex;
     margin: 0rem;
-    width: 25%;
+}
+
+.logo-svg-icon{
+    width: 28%;
+}
+
+.logo-svg-text{
+    width: 50%;
+}
+
+.logo-svg-text, .logo-svg-icon{
+    padding: 0rem 0.2rem;
 }
 
 .logo-svg-element{
     margin: 0rem 0.2rem;
+}
+
+.searcher{
+    display: flex;
+}
+
+.searcher-input{
+    width: 100%;
+    padding: 0.2rem;
+}
+
+.searcher-input input{
+    position: relative;
+    width: 100%;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    border-style: solid;
+    border-color: hsl(0, 0%, 91%);
+    border-width: 0.1rem;
+    background-color: hsl(0, 0%, 95%);
+}
+
+.searcher-input svg{
+    width: 50%;
+    z-index: 1002;
+}
+
+.aside-Elements{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.announcement-icon{
+    width: 100%;
+    height: 100%;
+    margin-top: 0.5rem;
+}
+
+.announcement-icon svg{
+    padding: 0.2rem;
+    background-color: rgb(233, 233, 233);
+    border-radius: 5rem;
+    fill: hsl(0, 0%, 31%);
+}
+
+.log-in{
+    border-style: solid;
+    border-color: hsl(209, 82%, 51%);
+    border-width: 0.1rem;
+    border-radius: 2rem;
+    padding: 0.2rem 2rem;
+}
+
+.log-in p{
+    text-align: center;
+    font-weight: 600;
+    color: hsl(209, 82%, 51%);
+}
+
+.registre{
+    background-color: hsl(209, 82%, 51%);
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    margin-top: 0.3rem;
+}
+
+.registre p{
+    text-align: center;
+    font-weight: 400;
+    color: hsl(0, 0%, 100%);
+}
+
+.personalization{
+    display: flex;
+    margin-top: 0.6rem;
+}
+
+.personalization-icon-img{
+    fill: hsl(0, 0%, 71%);
+}
+
+.personalization-icon-arrow{
+    fill: hsl(0, 0%, 71%);
+}
+
+
+/*====================
+=========Body=========
+======================*/
+
+.withe-background{
+    background-color: white;
+}
+
+.trend{
+    margin: 0.5rem 0rem;
+    display: flex;
+    width: 100%;
+}
+
+.trends-title{
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.trends-title h4{
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.trend-element{
+    width: 95%;
+    height: 100%;
+    display: absolute;
+}
+
+.trend-image{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
 
 }
 
-.logo-svg-icon svg{
+.trend-image img{
+    border-radius: 5%;
+}
+
+.trend-image-text{
+    top: 4.5rem;
+    position: absolute;
+    z-index: 1005rem;
+    padding: 0.5rem;
+}
+
+.trend-image-text p{
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.trend-text-element{
+    margin: 0.3rem;
+}
+
+.trend-image-text-tag p{
+    margin-top: 0.8rem;
+    font-size: 0.7rem;
+}
+
+.populars{
+    margin: 1rem 0rem;
+}
+
+.populars-title{
+    margin: 0.5rem 0rem;
+}
+
+.populars-title h4{
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.filter{
+    display: flex;
+    background-color: hsl(0, 0%, 100%);
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.filter-element{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0.2rem 0.3rem;
+}
+
+.filter-element-popular{
+    display: flex;
+    align-items: center;
+    background-color: rgb(245, 245, 245);
+    border-radius: 2rem;
+    padding: 0.2rem 0.5rem;
+}
+
+.filter-element-item{
+    display: flex;
+    width: 100%;
+}
+
+.filter-element-featured-icon svg{
+    fill: hsl(209, 82%, 51%);
+}
+
+.filter-element-featured-text p{
+    color: hsl(209, 82%, 51%);
+}
+
+.filter-element-Region{
+    display: flex;
+    align-items: center;
+    background-color: rgb(245, 245, 245);
+    border-radius: 2rem;
+    padding: 0.2rem 0.5rem;
+}
+
+.filter-element-region-icon svg{
+    fill: hsl(209, 82%, 51%);
+}
+
+.filter-element-region-text p{
+    color: hsl(209, 82%, 51%);
+}
+
+.filter-element-more-icon svg{
+    fill: hsl(0, 0%, 71%);
+}
+
+.filter-element-more-text{
+    display: flex;
+}
+
+.filter-element-more-text p{
+    color: hsl(0, 0%, 71%);;
+    margin: 0rem 0.1rem;
+}
+
+.filter-element-voted-icon svg{
+    fill: hsl(0, 0%, 71%);
+    align-items: center;
+}
+
+.filter-element-voted-text{
+    display: flex;
+}
+
+.filter-element-voted-text p{
+    margin: 0rem 0.1rem;
+    color: hsl(0, 0%, 71%);
+}
+
+.filter-element-options svg{
+    width: 100%;
+    fill: hsl(0, 0%, 71%);
+    margin-left: 1rem;
+}
+
+.filter-element-style-type{
+    fill: hsl(0, 0%, 71%);;;
+}
+
+.filter-element-style-arrow svg{
+    width: 100%;
+    fill: hsl(0, 0%, 71%);
+}
+
+.post{
+    display: flex;
+    background-color: hsl(0, 0%, 100%);
+    margin: 0.7rem 0rem;
+    border-radius: 0.2rem;
+}
+
+.post-vote{
+    width: 7%;
+    background-color: hsl(0, 0%, 96%);
+}
+
+.post-vote-icons{
+    align-items: center;
+    margin-left: 0.2rem;
+}
+
+.post-vote-icon-up, .post-vote-icon-down{
+    margin-left: 0.4rem;
+    margin: 0.2rem 0rem;
+}
+
+.post-vote-icon-up, .post-vote-icon-down svg{
+    fill: hsl(0, 0%, 71%);
+}
+
+.post-vote-quantity p{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.post-content{
+    position: relative;
     width: 100%;
     height: 100%;
 }
 
-.logo-svg-text svg{
-    width: 100%;
-    height: 100%;
+.post-content-element{
+    margin: 0.8rem 0.5rem;
+}
+
+.post-content-image{
+    padding: 0.5rem 3rem;
+}
+
+.post-content-options-element-social{
+    display: flex;
+    margin-right: 0.8rem;
+}
+
+.post-content-options-element-icon svg{
+    fill: hsl(0, 0%, 71%);
+}
+
+.post-content-options-element-text p{
+    color: hsl(0, 0%, 71%);
+    font-size: 0.8rem;
+    padding-top: 0.2rem;
+    align-items: center;
+}
+
+
+.post-content-options, .post-content-options-element{
+    display: flex;
+}
+
+.post-content-join{
+    position: absolute;
+    z-index: 1005rem;
+    right: 0rem;
+    margin: 0.5rem;
+}
+
+.post-content-category{
+    display: flex;
+}
+
+.post-content-category-image{
+    width: 3%;
+}
+
+.post-content-category-element{
+    display: flex;
+}
+
+.post-content-category-tag{
+    margin-top: 0.2rem;
+}
+
+.post-content-category-tag p{
+    font-size: 0.7rem ;
+    font-weight: 600;
+}
+
+.post-content-category-dot{
+    margin: 0rem 0.3rem;
+}
+
+.post-content-category-user p{
+    font-size: 0.7rem ;
+    font-weight: 100;
+    margin-top: 0.2rem;
+}
+
+.post-content-title{
+    position: relative;
+}
+
+.post-content-spoiler{
+    position: absolute;
+    padding: 0.2rem;
+    border-style: solid;
+    border-color: hsl(0, 0%, 91%);
+    border-radius: 0.5rem;
+    
+}
+
+.post-content-spoiler p{
+    font-size: 1rem;
+    border-color: hsl(0, 0%, 91%);
+}
+
+.aside-element{
+    overflow: visible;
+    display: flex;
+    margin: 1rem 0rem;
+    padding: 0.7rem;
+}
+
+
+.communities-title{
+    background-color: hsl(0, 0%, 0%);
+    padding-top: 3rem;
+    padding-bottom: 0.5rem;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+}
+
+.communities-title-text h4{
+    color: hsl(0, 0%, 100%);
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.communities-name{
+    display: flex;
+    border-bottom-style: solid;
+    border-bottom-color: hsl(0, 0%, 91%);
+    padding: 0.2rem 1rem;
+    align-items: center;
+}
+
+.communities-name-element{
+    display: flex;
+    align-items: center;
+    left: 0rem;
+}
+
+
+.communities-name-image{
+    width: 15%;
+    margin: 0rem 0.5rem;
+}
+
+.communities-name-text p{
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.communities-name-join{
+    margin-left: 1rem;
+    position: absolute;
+    right: 0.6rem;
+}
+
+.communities-expand{
+    margin: 0.8rem 0.7rem;
+    padding: 0.4rem 0rem;
+}
+
+.communities-expand p {
+    text-align: center;
+}
+
+.communities-others{
+    padding: 0rem 0.7rem;
+}
+
+.communities-others-style{
+    background-color: hsl(0, 0%, 93%);
+    border-radius: 1rem;
+    margin: 0.5rem 0rem;
+    padding: 0.2rem 0.5rem;
+}
+
+.communities-others-style p{
+    color: hsl(209, 82%, 51%);
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.premium-title-description{
+    display: flex;
+}
+
+.premium-image{
+    margin-top: 0.8rem;
+    margin-right: 0.5rem;
+}
+
+.premium-image svg{
+    fill: hsl(16, 100%, 50%);
+}
+
+.premium-text-title p{
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.premium-text-description p{
+    font-size: 0.8rem;
+    font-weight: 200;
+    margin: 0.5rem 0rem;
+}
+
+.premium-button{
+    margin: 0.5rem 0rem;
+    background-color: hsl(16, 100%, 50%);
+    border-radius: 1rem;
+    padding: 0.4rem;
+}
+
+.premium-button p{
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+    text-align: center;
+}
+
+.categorie{
+    display: flex;
+    justify-content: space-between;
+    border-bottom-style: solid;
+    border-bottom-color: hsl(0, 0%, 91%);
+    padding: 0.4rem 1rem;
+
+}
+
+.categorie-title p{
+    margin-top: 0.5rem;
+    font-size: 0.6rem;
+    font-weight: 600;
+}
+
+.categorie-expand{
+    color: hsl(0, 0%, 71%);
+}
+
+.extra{
+    display: unset;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0%;
+}
+
+.sticky{
+    position: sticky;
+    top: 0rem
+}
+
+.extra-element{
+    margin: 0.5rem 0rem;
+}
+
+.extra-element p{
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+.extra-copyrigth{
+    margin-top: 2rem;
 }
 
 
