@@ -238,7 +238,7 @@ a:focus, a:hover {
 
 .desktop-two-columns-aside .column-aside-reddit{
     position: sticky;
-    width: 15%;
+    width: 20%;
 }
 
 .desktop-two-columns-aside .column-main-reddit{
@@ -272,7 +272,19 @@ a:focus, a:hover {
 }
 
 .searcher{
+    margin-top: 0.2rem;
     display: flex;
+    background-color: hsl(0, 0%, 95%);
+    border-style: solid;
+    border-color: hsl(0, 0%, 91%);
+    border-width: 0.1rem;
+    border-radius: 0.2rem;
+}
+
+.searcher-icon svg{
+    align-items: center;
+    margin-top: 0.5rem;
+    fill: hsl(0, 0%, 74%);
 }
 
 .searcher-input{
@@ -283,12 +295,11 @@ a:focus, a:hover {
 .searcher-input input{
     position: relative;
     width: 100%;
-    border-radius: 0.2rem;
-    padding: 0.5rem;
-    border-style: solid;
-    border-color: hsl(0, 0%, 91%);
-    border-width: 0.1rem;
-    background-color: hsl(0, 0%, 95%);
+    background: transparent;
+    background-color: hsla(0, 0%, 100%, 0);
+    border-style: hidden;
+    margin-top: 0.1rem;
+    padding-top: 0.4rem;
 }
 
 .searcher-input svg{
@@ -299,7 +310,7 @@ a:focus, a:hover {
 .aside-Elements{
     display: flex;
     justify-content: space-between;
-    
+    margin-left: 1rem;
 }
 
 .announcement-icon{
@@ -377,7 +388,7 @@ a:focus, a:hover {
 
 .trends-title h4{
     font-size: 0.8rem;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .trend-element{
@@ -403,6 +414,15 @@ a:focus, a:hover {
     position: absolute;
     z-index: 1005rem;
     padding: 0.5rem;
+}
+
+.trend-image-background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1004rem;
+    background: linear-gradient(0deg, hsl(0, 0%, 0%), hsla(0, 0%, 0%, 0.158));
+    border-radius: 5%;
 }
 
 .trend-image-text p{
@@ -466,6 +486,7 @@ a:focus, a:hover {
 
 .filter-element-featured-text p{
     color: hsl(209, 82%, 51%);
+    font-weight: 600;
 }
 
 .filter-element-Region{
@@ -482,6 +503,7 @@ a:focus, a:hover {
 
 .filter-element-region-text p{
     color: hsl(209, 82%, 51%);
+    font-weight: 600;
 }
 
 .filter-element-more-icon svg{
